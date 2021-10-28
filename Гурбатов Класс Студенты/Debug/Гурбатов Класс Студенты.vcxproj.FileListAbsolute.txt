@@ -1,0 +1,3 @@
+C:\Users\User\source\repos\Гурбатов Класс Студенты\Debug\Гурбатов Класс Студенты.exe
+C:\Users\User\source\repos\Гурбатов Класс Студенты\Debug\Гурбатов Класс Студенты.pdb
+D:\Program\projects\Гурбатов Класс Студенты\Debug\Гурбатов Класс Студенты.exe
