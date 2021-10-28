@@ -39,7 +39,6 @@ public:
 
 
 	Student(std::string name, std::string secondname, std::string lastname, int ages, int course, int stud_bilet_number, std::string direction, int payment);			//Создаёт класс
-	Student(std::string name, std::string secondname, std::string lastname, int ages, int course, int stud_bilet_number, std::string direction, int payment);			//Создаёт класс
 	Student();						// создаёт класс по умолчанию
 
 	std::string get_student_info();						//выводит все данные в строковом виде
