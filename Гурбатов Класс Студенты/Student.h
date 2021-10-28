@@ -27,15 +27,15 @@ public:
 	void set_ages(int new_ages);					//устанавливает возраст студента
 	void set_stud_bilet_number(int new_stud_bilet_number);			//устанавливает номер студ. билета студента
 
-	std::string const get_name();				//возращает имя студента
-	std::string const get_secondname();				//возращает фамилию студента
-	std::string const get_lastname();				//возращает отчество студента
-	std::string const get_direction();			//возращает направление студента
-	int const get_course();						//возращает курс студента
-	int const get_payment();						//возращает оплату студента
-	int const get_ages();							//возращает возраст студента
-	int const get_stud_bilet_number();				//возращает номер студ. билета студента
-	int const get_group();							//возращает группу студента
+	std::string const get_name();				//возвращает имя студента
+	std::string const get_secondname();				//возвращает фамилию студента
+	std::string const get_lastname();				//возвращает отчество студента
+	std::string const get_direction();			//возвращает направление студента
+	int const get_course();						//возвращает курс студента
+	int const get_payment();						//возвращает оплату студента
+	int const get_ages();							//возвращает возраст студента
+	int const get_stud_bilet_number();				//возвращает номер студ. билета студента
+	int const get_group();							//возвращает группу студента
 
 
 	Student(std::string name, std::string secondname, std::string lastname, int ages, int course, int stud_bilet_number, std::string direction, int payment);			//Создаёт класс

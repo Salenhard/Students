@@ -63,45 +63,45 @@ void Student::set_stud_bilet_number(int new_stud_bilet_number)			//устанавливает
 	else std::cout << "Неверный формат данных" << std::endl;
 }
 
-std::string const Student::get_name()			//возращает имя студента
+std::string const Student::get_name()			//возвращает имя студента
 {
 	return this->name;
 }
 
-std::string const Student::get_secondname()			//возращает фамилию студента
+std::string const Student::get_secondname()			//возвращает фамилию студента
 {
 	return this->secondname;
 }
 
-std::string const Student::get_lastname()				//возращает отчество студента
+std::string const Student::get_lastname()				//возвращает отчество студента
 {
 	return this->lastname;
 }
 
-std::string const Student::get_direction()			//возращает направление студента
+std::string const Student::get_direction()			//возвращает направление студента
 {
 	return this->direction;
 }
-int const Student::get_group()				//возращает группу студента
+int const Student::get_group()				//возвращает группу студента
 {
 	return this->group;
 }
 
-int const Student::get_course()				//возращает курс студента
+int const Student::get_course()				//возвращает курс студента
 {
 	return this->course;
 }
-int const Student::get_payment()			//возращает оплату студента
+int const Student::get_payment()			//возвращает оплату студента
 {
 	return this->payment;
 }
 
-int const Student::get_ages()				//возращает возраст студента
+int const Student::get_ages()				//возвращает возраст студента
 {
 	return this->ages;
 }
 
-int const Student::get_stud_bilet_number()				//возращает номер студ. билета студента
+int const Student::get_stud_bilet_number()				//возвращает номер студ. билета студента
 {
 	return this->stud_bilet_number;
 }
