@@ -3,7 +3,8 @@
 
 class Student
 {
-private: //поля класса student
+private:			//поля класса student
+
 	std::string name;
 	std::string secondname;
 	std::string lastname;
@@ -13,27 +14,34 @@ private: //поля класса student
 	std::string direction;
 	int payment;
 	int group;
+
 public:
-	void set_group(int new_group); //устанавливает группу студента
-	void set_name(std::string new_name); //устанавливает имя студента
-	void set_secondname(std::string new_secondname);//устанавливает фамилию студента
-	void set_lastname(std::string new_lastname);//устанавливает отчество студента
-	void set_direction(std::string new_direction);//устанавливает направление студента
-	void set_course(int new_course);//устанавливает курс студента
-	void set_payment(int new_payment);//устанавливает оплату студента
-	void set_ages(int new_ages);//устанавливает возраст студента
-	void set_stud_bilet_number(int new_stud_bilet_number);//устанавливает номер студ. билета студента
-	std::string const get_name();//возращает имя студента
-	std::string get_secondname();//возращает фамилию студента
-	std::string get_lastname();//возращает отчество студента
-	std::string get_direction();//возращает направление студента
-	int get_course();//возращает курс студента
-	int get_payment();//возращает оплату студента
-	int get_ages();//возращает возраст студента
-	int get_stud_bilet_number();//возращает номер студ. билета студента
-	int get_group();//возращает группу студента
-	Student(std::string name, std::string secondname, std::string lastname, int ages, int course, int stud_bilet_number, std::string direction, int payment);//Создаёт класс
-	void get_student_info();//выводит все данные в строковом виде
-	Student(); // создаёт класс по умолчанию
+
+	void set_group(int new_group);				 //устанавливает группу студента
+	void set_name(std::string new_name);			//устанавливает имя студента
+	void set_secondname(std::string new_secondname);		//устанавливает фамилию студента
+	void set_lastname(std::string new_lastname);		//устанавливает отчество студента
+	void set_direction(std::string new_direction);		//устанавливает направление студента
+	void set_course(int new_course);				//устанавливает курс студента
+	void set_payment(int new_payment);				//устанавливает оплату студента
+	void set_ages(int new_ages);					//устанавливает возраст студента
+	void set_stud_bilet_number(int new_stud_bilet_number);			//устанавливает номер студ. билета студента
+
+	std::string const get_name();				//возращает имя студента
+	std::string const get_secondname();				//возращает фамилию студента
+	std::string const get_lastname();				//возращает отчество студента
+	std::string const get_direction();			//возращает направление студента
+	int const get_course();						//возращает курс студента
+	int const get_payment();						//возращает оплату студента
+	int const get_ages();							//возращает возраст студента
+	int const get_stud_bilet_number();				//возращает номер студ. билета студента
+	int const get_group();							//возращает группу студента
+
+
+	Student(std::string name, std::string secondname, std::string lastname, int ages, int course, int stud_bilet_number, std::string direction, int payment);			//Создаёт класс
+	Student(std::string name, std::string secondname, std::string lastname, int ages, int course, int stud_bilet_number, std::string direction, int payment);			//Создаёт класс
+	Student();						// создаёт класс по умолчанию
+
+	std::string get_student_info();						//выводит все данные в строковом виде
 };
 

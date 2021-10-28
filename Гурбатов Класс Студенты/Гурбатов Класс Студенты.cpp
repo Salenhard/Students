@@ -4,5 +4,5 @@ int main()
 {
 	setlocale(0, "ru");
 	Student c1;
-	c1.get_student_info();
+	std::cout << c1.get_student_info();
 }
