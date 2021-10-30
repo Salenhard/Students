@@ -1,46 +1,60 @@
-#pragma once
+п»ї#pragma once
+
+// РђРІС‚РѕСЂ: Р’Р»Р°РґРёСЃР»Р°РІ Р“СѓСЂР±Р°С‚РѕРІ РђРЅР°С‚РѕР»СЊРµРІРёС‡ РР’Рў-20
 #include <string>
 
+// РљР»Р°СЃСЃ РЎС‚СѓРґРµРЅС‚
 class Student
 {
-private:			//поля класса student
+private:			// РїРѕР»СЏ РєР»Р°СЃСЃР° Students
 
 	std::string name;
 	std::string secondname;
 	std::string lastname;
-	int ages;
-	int course;
-	int	stud_bilet_number;
-	std::string direction;
-	int payment;
-	int group;
+	int age;						// Р’РѕР·СЂР°СЃС‚
+	int course;						// РљСѓСЂСЃ
+	int	student_id;					// РЅРѕРјРµСЂ СЃС‚СѓРґРµРЅРёС‡РµСЃРєРѕРіРѕ Р±РёР»РµС‚Р°
+	std::string direction;			// РЅР°РїСЂР°РІР»РµРЅРёРµ 
+	int payment;					// РѕРїР»Р°С‚Р° 0 РµСЃР»Рё Р±РµСЃРїР»Р°С‚РЅРѕ
+	int group;						// РЅРѕРјРµСЂ РіСЂСѓРїРїР°
 
 public:
 
-	void set_group(int new_group);				 //устанавливает группу студента
-	void set_name(std::string new_name);			//устанавливает имя студента
-	void set_secondname(std::string new_secondname);		//устанавливает фамилию студента
-	void set_lastname(std::string new_lastname);		//устанавливает отчество студента
-	void set_direction(std::string new_direction);		//устанавливает направление студента
-	void set_course(int new_course);				//устанавливает курс студента
-	void set_payment(int new_payment);				//устанавливает оплату студента
-	void set_ages(int new_ages);					//устанавливает возраст студента
-	void set_stud_bilet_number(int new_stud_bilet_number);			//устанавливает номер студ. билета студента
+	void set_group(int new_group);								// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РіСЂСѓРїРїСѓ
+	void set_name(const std::string &new_name);					// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РРјСЏ
+	void set_secondname(const std::string &new_secondname);		// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РћС‚С‡РµСЃС‚РІРѕ
+	void set_lastname(const std::string &new_lastname);			// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ Р¤Р°РјРёР»РёСЋ
+	void set_direction(const std::string &new_direction);		// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РЅР°РїСЂР°РІР»РµРЅРёРµ
+	void set_course(int new_course);							// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РєСѓСЂСЃ
+	void set_payment(int new_payment);							// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РѕРїР»Р°С‚Сѓ
+	void set_age(int new_age);									// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РІРѕР·СЂР°СЃС‚
+	void set_student_id(int new_student_id);				// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РЅРѕРјРµСЂ СЃС‚СѓРґ. Р±РёР»РµС‚
+	std::string get_name() const;								// РІРѕР·СЂР°С‰Р°РµС‚ РёРјСЏ
+	std::string get_secondname() const;							// РІРѕР·СЂР°С‰Р°РµС‚ РѕС‚С‡РµСЃС‚РІРѕ
+	std::string get_lastname() const;							// РІРѕР·СЂР°С‰Р°РµС‚ С„Р°РјРёР»РёСЋ
+	std::string get_direction() const;							// РІРѕР·СЂР°С‰Р°РµС‚ РЅР°РїСЂР°РІР»РµРЅРёРµ
+	int get_course() const;										// РІРѕР·СЂР°С‰Р°РµС‚ РєСѓСЂСЃ
+	int get_payment() const;									// РІРѕР·СЂР°С‰Р°РµС‚ РѕРїР»Р°С‚Сѓ
+	int get_age() const;										// РІРѕР·СЂР°С‰Р°РµС‚ РІРѕР·СЂР°СЃС‚
+	int get_student_id() const;							// РІРѕР·СЂР°С‰Р°РµС‚ РЅРѕРјРµСЂ СЃС‚СѓРґ. Р±РёР»РµС‚
+	int get_group() const;										// РІРѕР·СЂР°С‰Р°РµС‚ РіСЂСѓРїРїСѓ
 
-	std::string const get_name();				//возвращает имя студента
-	std::string const get_secondname();				//возвращает фамилию студента
-	std::string const get_lastname();				//возвращает отчество студента
-	std::string const get_direction();			//возвращает направление студента
-	int const get_course();						//возвращает курс студента
-	int const get_payment();						//возвращает оплату студента
-	int const get_ages();							//возвращает возраст студента
-	int const get_stud_bilet_number();				//возвращает номер студ. билета студента
-	int const get_group();							//возвращает группу студента
+	Student();													// РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	Student(const std::string& new_name, const std::string& new_secondname, const std::string& new_lastname, int new_age, int new_course, int new_student_id, const std::string& new_direction, int new_payment);			// sРљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР°
+	void set_props(const std::string& new_name, const std::string& new_secondname, const std::string& new_lastname, int new_age, int new_course, int new_student_id, const std::string& new_direction, int new_payment);			// С„СѓРЅРєС†РёСЏ СѓСЃС‚Р°РЅРѕРІРєРё РІСЃРµС… Р·РЅР°С‡РµРЅРёР№ РѕР±СЊРµРєС‚Р°
 
-
-	Student(std::string name, std::string secondname, std::string lastname, int ages, int course, int stud_bilet_number, std::string direction, int payment);			//Создаёт класс
-	Student();						// создаёт класс по умолчанию
-
-	std::string get_student_info();						//выводит все данные в строковом виде
+	std::string get_student_info() const;						// РІРѕР·СЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ СЃС‚СѓРґРµРЅС‚Рµ РІ РІРёРґРµ СЃС‚СЂРѕРєРё
 };
 
+
+
+/*1. РёРјСЏ
+2. РѕРїРёСЃР°РЅРёРµ РєР»
+2. РєРѕРјРјРµРЅС‚С‹
+3. public, private
+4. РІРІРѕРґ Р±РµР· РєРѕРЅСЃРёР»Рё (С‡РµСЂРµР· РїР°СЂР°Рј.)
+5. РїСЂРµСѓСЃР»РѕРІРёСЏ, throw
+5. РєРѕРЅСЃС‚СЂ СЃ РїР°СЂР°Рј ( СЃ РІС‹Р·РѕРІ СЃРµС‚С‚РµСЂРѕРІ )
+6. * const methods
+6. * const & param
+7. * to_string*/

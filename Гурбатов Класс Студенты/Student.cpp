@@ -1,144 +1,151 @@
-#include "Student.h"
+п»ї#include "Student.h"
 #include <iostream>
 
-void Student::set_name(std::string new_name)			//устанавливает имя студента
+void Student::set_name(const std::string &new_name)					// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РРјСЏ
 {
-	if (stoi(new_name) == false || new_name != "")
+	if (new_name != "")
 		this->name = new_name;
-	else std::cout << "Неверный формат данных" << std::endl;
+	else throw std::invalid_argument("Invalid argument");
 }
 
-void Student::set_secondname(std::string new_secondname)		//устанавливает фамилию студента
+void Student::set_secondname(const std::string &new_secondname)		// СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РРјСЏ
 {
-	if (stoi(new_secondname) == false || new_secondname != "")
+	if (new_secondname != "")
 		this->secondname = new_secondname;
-	else std::cout << "Неверный формат данных" << std::endl;
+	else throw std::invalid_argument("Invalid argument");
 }
 
-void Student::set_lastname(std::string new_lastname)			//устанавливает отчество студента
+void Student::set_lastname(const std::string &new_lastname)			// РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РћС‚С‡РµСЃС‚РІРѕ
 {
-	if (stoi(new_lastname) == false || new_lastname != "")
+	if (new_lastname != "")
 		this->lastname = new_lastname;
-	else std::cout << "Неверный формат данных" << std::endl;
+	else throw std::invalid_argument("Invalid argument");
 }
 
-void Student::set_direction(std::string new_direction)			//устанавливает направление студента
+void Student::set_direction(const std::string &new_direction)		// РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РќР°РїСЂР°РІР»РµРЅРёРµ
 {
-	if (stoi(new_direction) == false || new_direction != "")
+	if (new_direction != "")
 		this->direction = new_direction;
-	else std::cout << "Неверный формат данных" << std::endl;
+	else throw std::invalid_argument("Invalid argument");
 }
 
-void Student::set_course(int new_course)		//устанавливает курс студента
+void Student::set_course(int new_course)							// РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РєСѓСЂСЃ
 {
-	if(new_course > 0 and new_course < 6)
+	if(new_course > 0 && new_course < 6)
 		this->course = new_course;
-	else std::cout << "Неверный формат данных" << std::endl;
+	else throw std::invalid_argument("Invalid argument");
 }
 
-void Student::set_payment(int new_payment)			//устанавливает оплату студента
+void Student::set_payment(int new_payment)							// РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РѕРїР»Р°С‚Сѓ
 {
 	if(new_payment >= 0)
 		this->payment = new_payment;
-	else std::cout << "Неверный формат данных" << std::endl;
+	else throw std::invalid_argument("Invalid argument");
 }
 
-void Student::set_ages(int new_ages)			//устанавливает возраст студента
+void Student::set_age(int new_age)									// РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РІРѕР·СЂР°СЃС‚
 {
-	if(ages > 16)
-		this->ages = new_ages;
-	else std::cout << "Неверный формат данных" << std::endl;
+	if(new_age > 16)
+		this->age = new_age;
+	else throw std::invalid_argument("Invalid argument");
 }
-void Student::set_group(int new_group)				//устанавливает группу студента
+void Student::set_group(int new_group)								// РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РіСЂСѓРїРїСѓ
 {
 	if (new_group > 0)
 		this->group = new_group;
-	else std::cout << "Неверный формат данных" << std::endl;
+	else throw std::invalid_argument("Invalid argument");
 }
 
-void Student::set_stud_bilet_number(int new_stud_bilet_number)			//устанавливает номер студ. билета студента
+void Student::set_student_id(int new_student_id)			// РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РЅРѕРјРµСЂ СЃС‚СѓРґ. Р±РёР»РµС‚Р°
 {
-	if (new_stud_bilet_number > 0)
-		this->stud_bilet_number = new_stud_bilet_number;
-	else std::cout << "Неверный формат данных" << std::endl;
+	if (new_student_id > 0)
+		this->student_id = new_student_id;
+	else throw std::invalid_argument("Invalid argument");
 }
 
-std::string const Student::get_name()			//возвращает имя студента
+std::string Student::get_name()	const							// Р’РѕР·СЂР°С‰Р°РµС‚ РёРјСЏ
 {
 	return this->name;
 }
 
-std::string const Student::get_secondname()			//возвращает фамилию студента
+std::string Student::get_secondname() const						// Р’РѕР·СЂР°С‰Р°РµС‚ РѕС‚С‡РµСЃС‚РІРѕ
 {
 	return this->secondname;
 }
 
-std::string const Student::get_lastname()				//возвращает отчество студента
+std::string Student::get_lastname() const 						// Р’РѕР·СЂР°С‰Р°РµС‚ С„Р°РјРёР»РёСЋ
 {
 	return this->lastname;
 }
 
-std::string const Student::get_direction()			//возвращает направление студента
+std::string Student::get_direction() const 						// Р’РѕР·СЂР°С‰Р°РµС‚ РЅР°РїСЂР°РІР»РµРЅРёРµ
 {
 	return this->direction;
 }
-int const Student::get_group()				//возвращает группу студента
+int Student::get_group() const 									// Р’РѕР·СЂР°С‰Р°РµС‚ РіСЂСѓРїРїСѓ
 {
 	return this->group;
 }
 
-int const Student::get_course()				//возвращает курс студента
+int Student::get_course() const 								// Р’РѕР·СЂР°С‰Р°РµС‚ РєСѓСЂСЃ
 {
 	return this->course;
 }
-int const Student::get_payment()			//возвращает оплату студента
+int Student::get_payment() const 								// Р’РѕР·СЂР°С‰Р°РµС‚ РѕРїР»Р°С‚Сѓ
 {
 	return this->payment;
 }
 
-int const Student::get_ages()				//возвращает возраст студента
+int Student::get_age()	 const 									// Р’РѕР·СЂР°С‰Р°РµС‚ РІРѕР·СЂР°СЃС‚
 {
-	return this->ages;
+	return this->age;
 }
 
-int const Student::get_stud_bilet_number()				//возвращает номер студ. билета студента
-{
-	return this->stud_bilet_number;
+int Student::get_student_id() const 						// Р’РѕР·СЂР°С‰Р°РµС‚ РЅРѕРјРµСЂ СЃС‚СѓРґ. Р±РёР»РµС‚Р°
+{	
+	return this->student_id;
 }
 
-Student::Student(std::string name, std::string secondname, std::string lastname, int ages, int course, int stud_bilet_number, std::string direction, int payment)			//Создаёт класс
+Student::Student(const std::string &new_name, const std::string &new_secondname, const std::string &new_lastname, int new_age, int new_course, int new_student_id, const std::string &new_direction, int new_payment)			//РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР°
 {
-	set_name(name);
-	set_secondname(secondname);
-	set_lastname(lastname);
-	set_ages(ages);
-	set_course(course);
-	set_stud_bilet_number(stud_bilet_number);
-	set_direction(direction);
-	set_payment(payment);
+	set_props(new_name, new_secondname, new_lastname, new_age, new_course, new_student_id, new_direction, new_payment);
 }
-Student::Student()				//Создаёт класс по умолчанию
+
+Student::Student()												// РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєР»Р°СЃСЃР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 {
-	this->name = "Иван";
-	this->secondname = "Иванович";
-	this->lastname = "Иванов";
+	this->name = "РРІР°РЅ";
+	this->secondname = "РРІР°РЅРѕРІРёС‡";
+	this->lastname = "РРІР°РЅРѕРІ";
 	this->course = 2;
-	this->ages = 18;
-	this->stud_bilet_number = 2221;
-	this->direction = "ИВТ";
+	this->age = 18;
+	this->student_id = 2221;
+	this->direction = "РР’Рў-20";
 	this->payment = 0;
 	this->group = 1;
 }
-std::string Student::get_student_info()				//выводит все данные в строковом виде
+
+std::string Student::get_student_info()	const					// РІРѕР·СЂР°С‰Р°РµС‚ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ СЃС‚СѓРґРµРЅС‚Рµ РІ РІРёРґРµ СЃС‚СЂРѕРєРё
 {
-	std::string str = "Данные о студенте:\n" +
-		std::string("Имя: ") + name + "\n" +
-		"Фамилия: " + secondname + "\n" +
-		"Отчество: " + lastname + "\n" +
-		"Возраст: " + std::to_string(ages) + "\n" +
-		"Курс: " + std::to_string(course) + "\n" + +
-		"Номер студенческого билета: " + std::to_string(stud_bilet_number) + "\n" +
-		"Направление: " + direction + "\n" +
-		"Оплата: " + std::to_string(payment) + "\n";
+	std::string str = "Р”Р°РЅРЅС‹Рµ Рѕ СЃС‚СѓРґРµРЅС‚Рµ:\n" +
+		std::string("РРјСЏ: ") + name + "\n" +
+		"РћС‚С‡РµСЃС‚РІРѕ: " + secondname + "\n" +
+		"Р¤Р°РјРёР»РёСЏ: " + lastname + "\n" +
+		"Р’РѕР·СЂР°СЃС‚: " + std::to_string(age) + "\n" +
+		"РљСѓСЂСЃ: " + std::to_string(course) + "\n" + +
+		"РќРѕРјРµСЂ СЃС‚СѓРґ. Р±РёР»РµС‚Р°: " + std::to_string(student_id) + "\n" +
+		"РќР°РїСЂР°РІР»РµРЅРёРµ: " + direction + "\n" +
+		"РћРїР»Р°С‚Р°: " + std::to_string(payment) + "\n";
 	 return str;
+}
+
+void Student::set_props(const std::string& new_name, const std::string& new_secondname, const std::string& new_lastname, int new_age, int new_course, int new_student_id, const std::string& new_direction, int new_payment) // С„СѓРЅРєС†РёСЏ СѓСЃС‚Р°РЅРѕРІРєРё РІСЃРµС… Р·РЅР°С‡РµРЅРёР№ РѕР±СЊРµРєС‚Р°
+{
+	set_name(new_name);
+	set_secondname(new_secondname);
+	set_lastname(new_lastname);
+	set_age(new_age);
+	set_course(new_course);
+	set_student_id(new_student_id);
+	set_direction(new_direction);
+	set_payment(new_payment);
 }
