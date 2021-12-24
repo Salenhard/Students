@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GtaTestDurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Executable>C:\Users\User\source\repos\ooplab-class\Гурбатов Класс Студенты\Debug\Student-test.exe</Executable>
+  <TestDurations>
+    <TestDuration Test="Name.Name" Duration="1" />
+    <TestDuration Test="Student.Name" Duration="1" />
+    <TestDuration Test="Student.Group2" Duration="1" />
+    <TestDuration Test="Student.LastName" Duration="1" />
+    <TestDuration Test="Student.Group" Duration="1" />
+    <TestDuration Test="Student.SecondName" Duration="1" />
+    <TestDuration Test="Student.Student_id" Duration="1" />
+  </TestDurations>
+</GtaTestDurations>
